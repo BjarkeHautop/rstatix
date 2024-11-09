@@ -5,10 +5,10 @@
 #'@param formula A formula specifying the outcome and group variables.
 #'@param conf.level Confidence level for confidence intervals.
 #'@param detailed If TRUE, return additional columns such as standard error, method, and statistic.
-#'@param p.adjust.method The p-value adjustment method (default is "Tukey").
+#'@param p.adjust.method The p-value adjustment method (default is "holm").
 #'@return A data frame with the results of the Games-Howell test.
 #'@export
-games_howell_test <- function(data, formula, conf.level = 0.95, detailed = FALSE, p.adjust.method = "Tukey") {
+games_howell_test <- function(data, formula, conf.level = 0.95, detailed = FALSE, p.adjust.method = "holm") {
   args <- as.list(environment()) %>%
     .add_item(method = "games_howell_test")
 
